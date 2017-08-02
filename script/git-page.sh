@@ -1,5 +1,6 @@
 #! /bin/sh
 if [ "$GITHUB_TOKEN" ]; then
+  git checkout deploy
   git clone git@github.com:jerry-i/jerry-i.github.io.git resource
   npm run build
   cd public
