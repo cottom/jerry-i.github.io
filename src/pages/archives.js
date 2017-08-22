@@ -39,7 +39,6 @@ export default class ArchivesPage extends Component {
   render() {
     const {data: {allMarkdownRemark: {edges = []}}} = this.props
     const formatterData = {}
-    console.log(edges)
     const posts = edges.map(item => item.node.frontmatter)
     return (
       <Wrapper>

@@ -22,7 +22,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               id
               timeToRead
               frontmatter {
-                excerpt
                 path
                 title
                 tags

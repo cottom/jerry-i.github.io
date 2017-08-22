@@ -31,5 +31,6 @@ module.exports = {
       path: '/about',
       activePath: /\about/
     }
-  ]
+  ],
+  PAGE_SIZE: 7
 }

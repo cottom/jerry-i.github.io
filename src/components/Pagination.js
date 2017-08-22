@@ -49,14 +49,13 @@ const PreOrNextBtn = (props) => {
   return disabled ? <DisabledLink {...props} /> : <LinkBtnItem {...props}/>
 }
 
-const { PAGE_SIZE: pageSize } = require('../../config')
 export default function PaginationComponent({total, index, pageNum}) {
+  if (total <= PAGE_SIZE) return <Pagination/>
   const PRE_FLAG = '<<';
   const NEXT_FLAG = '>>';
-  const showCount = 7
-  const sideShowCount = Math.floor( showCount / 2) - 1
-  const showPreMore = pageNum > showCount && index - sideShowCount > 2
-  const showNextMore = pageNum > showCount && index + sideShowCount < pageNum - 1
+  const sideShowCount = Math.floor( PAGE_SIZE / 2) - 1
+  const showPreMore = pageNum > PAGE_SIZE && index - sideShowCount > 2
+  const showNextMore = pageNum > PAGE_SIZE && index + sideShowCount < pageNum - 1
   let startNum, endNum
   const pageArr = []
   if (showPreMore && showNextMore) {
@@ -64,9 +63,9 @@ export default function PaginationComponent({total, index, pageNum}) {
     endNum = index + sideShowCount
     for (let i = index - sideShowCount; i < index + sideShowCount + 1; i++) pageArr.push(i)
   } else if (showPreMore && !showNextMore) {
-    for (let i = pageNum - showCount + 2; i < pageNum; i++) pageArr.push(i)
+    for (let i = pageNum - PAGE_SIZE + 2; i < pageNum; i++) pageArr.push(i)
   } else if (!showPreMore && showNextMore) {
-    for (let i = 2; i < showCount ; i++) pageArr.push(i)
+    for (let i = 2; i < PAGE_SIZE ; i++) pageArr.push(i)
   } else {
     for (let i = 2; i < pageNum; i++) pageArr.push(i)
   }

@@ -33,10 +33,6 @@ export default function AboutPage()  {
         <LineDes>cottom</LineDes>
       </Line>
       <Line>
-        <LineLabel>:</LineLabel>
-        <LineDes>cottom</LineDes>
-      </Line>
-      <Line>
         <LineLabel>profession:</LineLabel>
         <LineDes>Web Developer</LineDes>
       </Line>

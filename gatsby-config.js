@@ -7,7 +7,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/resource/posts`,
+        path: process.env.RUN_ENV === 'travis' ?  `${__dirname}/resource/posts` : `${__dirname}/posts`,
         name: 'pages',
       },
     },
