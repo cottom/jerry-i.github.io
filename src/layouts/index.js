@@ -15,7 +15,7 @@ class Template extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <NavHeader></NavHeader>
+        <NavHeader location={location}></NavHeader>
         {children()}
       </Container>
     )

@@ -40,8 +40,8 @@ const StyledIcon = styled.i`
   }
 `
 
-
-export default function NavHeader({active = ''}) {
+export default function NavHeader(props) {
+  const { location } = props
   return (
     <Header>
       <NavLine>

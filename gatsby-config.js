@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'cottom blog',
     author: 'cottom',
+    'siteUrl': 'https://jerry-i.github.io'
   },
   plugins: [
     {
@@ -39,12 +40,6 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        //trackingId: 'ADD YOUR TRACKING ID HERE',
-      },
-    },
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap'
